@@ -1,0 +1,19 @@
+{
+  "name": "personal-blog",
+  "version": "1.0.0",
+  "description": "a very simple personal writing platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jollen/personal-blog.git"
+  },
+  "author": "jollen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jollen/personal-blog/issues"
+  },
+  "homepage": "https://github.com/jollen/personal-blog#readme"
+}
