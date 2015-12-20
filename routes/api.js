@@ -1,22 +1,30 @@
 var express = require('express');
 var router = express.Router();
 
-/* REST APIs */
-router.post('/2/post', function(req, res, next) {
-	var person;
+var db = [];
 
-	person = {
-		'name': 'jollen',
-		'email': 'jollen@jollen.org'
+/* REST APIs */
+router.post('/1/post', function(req, res, next) {
+	var title = req.query.title;
+	var message = req.query.message;
+
+	// 使用物件表示
+	var article = {
+		title: title,
+		message: message
 	};
 
-	res.json(person);
+	// (TBD) 存放至全域陣列
+	db.push(article);
+
+	//
+	res.json({
+		status: "OK"
+	});
 });
 
-router.get('/2/post/:id', function(req, res, next) {
-	var id = req.params.id;
-
-	res.end();
+router.get('/1/post', function(req, res, next) {
+	res.json(db);
 });
 
 module.exports = router;
